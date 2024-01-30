@@ -1,9 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+const h1Style = {
+  background: "blue",
+  color: "#fff"
+};
+
+const RANKS = {
+  b: "Beginner",
+  e: "Expert"
+};
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <h1 style={h1Style}>{`I am currently a ${RANKS.b} at React, working towards becoming an ${RANKS.e}`}</h1>
   </React.StrictMode>
 );
 
