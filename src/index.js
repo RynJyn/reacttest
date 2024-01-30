@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Paragraph from './Paragraph';
 
 const h1Style = {
   background: "blue",
@@ -15,6 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <h1 style={h1Style}>{`I am currently a ${RANKS.b} at React, working towards becoming an ${RANKS.e}`}</h1>
+    <Paragraph/>
   </React.StrictMode>
 );
 
