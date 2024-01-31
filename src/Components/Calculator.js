@@ -18,7 +18,7 @@ const Calculator = () =>
     {
         // Adhering to the course for this. In the real world eval() would not be used here.
         // eslint-disable-next-line
-        setDisplay(eval(display)); 
+        setDisplay(eval(display).toString()); 
     };
 
     return <>
