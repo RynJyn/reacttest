@@ -1,0 +1,29 @@
+.main-calculator 
+{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 1em 0;
+}
+
+.main-calculator #answer 
+{
+    width: 100%;
+    background: lightgrey;
+    text-align: right;
+    font-size: 2em;
+    padding: 0.3em;
+}
+
+.main-calculator input.main-calculator-button {
+    background: #333;
+    color: #fff;
+    height: 100px;
+    width: calc(100%/3);
+}
+
+.main-calculator input.main-calculator-button.main-calculator-control 
+{
+    width: 50%;
+    height: 125px;
+}
