@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Home from './Components/Home';
 import About from './Components/About';
@@ -7,21 +7,18 @@ import Counter from './Components/Counter';
 import {Routes, Route} from 'react-router-dom';
 
 function App(){
-    const [state, updateState] = useState();
-
-    const init = () => {
-
-    }
     return (
         <>
+        <Header/>
         <Routes>
-                <Route path="/" element={<Home/>}/>
+                <Route path="/" element={
+                    <>
+                        <Home/>
+                    </>
+                }/>
+                <Route path = "/counter" element={<Counter/>}/>
                 <Route path = "/about" element={<About/>}/>
         </Routes>
-        {<div className='main'>
-            <Header/>
-            <Counter/>
-        </div>}
         </>
     );
 }
