@@ -22,7 +22,7 @@ const Pokemon = () =>
     {
         const res = await axios.get(url);
         setName(res.data.name);
-        setType(res.data.types[0].type.name);
+        setType(res.data.types);
         console.log(res);
     }
 
@@ -36,8 +36,16 @@ const Pokemon = () =>
                     <option value="7">Squirtle</option>
                 </select>
 
-                <p>Your chosen Pokémon: <span className="capitalise">{name}</span></p>
-                <p>Type: <span className={`capitalise pokemon-type-${type ? type : "none"}`}>{type}</span></p>
+                {name &&
+                    <p>Your chosen Pokémon: <span className="capitalise">{name}</span></p>
+                }
+                {type && type.length > 0 &&
+                    <p>Type:
+                        {type.map((t) => {
+                            return <span className={`capitalise pokemon-type-${t}`}>{t.type.name}</span>;
+                        })}
+                    </p>
+                }
             </div>
         </>
     )
