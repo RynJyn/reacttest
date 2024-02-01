@@ -1,0 +1,5 @@
+#main-pokemon span.capitalise 
+{
+    display: inline-block;
+    text-transform: capitalize;
+}
